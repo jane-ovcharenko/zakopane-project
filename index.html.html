@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zakopane</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #017ddf;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 35px;
+        margin: 3px 5px;
+      }
+      h2 {
+        text-align: center;
+        color: #3c5791;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 15px;
+        border: 1px solid #017ddf;
+        border-radius: 4px;
+        margin: 5px 5px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 4px;
+      }
+      p {
+        text-align: center;
+        color: #017ddf;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 500;
+        margin: 10px;
+      }
+      a {
+        display: block;
+        text-align: center;
+        color: #ef5f9a;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 4;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #017ddf;
+        color: #ffffff;
+        padding: 15px 20px;
+        border: 1px solid #017ddf;
+        border-radius: 15px;
+        transition: 150ms ease-in-out;
+        font-size: 16px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+      button:hover {
+        cursor: pointer;
+        background: #ffffff;
+        color: #017ddf;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 10px 100px;
+        border-radius: 6px;
+        padding: 5px;
+        background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      }
+      .author {
+        display: block;
+        text-align: center;
+        margin: 15px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #3c5791;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Discover Zakopane!</h1>
+      <h2>Winter capital of Poland</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/675/original/Zakopane.jpg?1657133828"
+        alt="Zakopane view"
+      />
+      <p>
+        Zakopane, <strong>Poland's premier mountain resort,</strong> is one of
+        the country's most popular holiday destinations, both in the winter for
+        skiing and in the summer for hiking and camping. <br />
+        <br />
+        Zakopane has long been a playground for Poles and travellers from
+        <em>Eastern Europe,</em> but is just now being discovered by the rest of
+        the world for its splendid natural scenery, world-class ski slopes, and
+        great value-for-the-money hotels and apartments.
+      </p>
+      <hr />
+      <a href="https://en.wikipedia.org/wiki/Zakopane" target="_blank">
+        Learn more about Zakopane
+      </a>
+      <button>Travel to Zakopane &#9978;</button>
+      <span class="author">
+        <em>This page was created by </em> <strong>Yevheniia Ovcharenko</strong>
+      </span>
+    </div>
+    <script>
+      function trip() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let city = prompt("Where are you from?");
+
+        if (city === "Zakopane") {
+          alert("Wow, " + name + ". You are already here! Enjoy!");
+        } else {
+          alert(
+            "Thank you, " +
+              name +
+              ". We will send you our trips from " +
+              city +
+              " to Zakopane. Check your email soon!"
+          );
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", trip);
+    </script>
+  </body>
+</html>
